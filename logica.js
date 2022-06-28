@@ -5,7 +5,7 @@ function crearLista(lista) {
                                 <a style="cursor:zoom-in" onclick="mostrarPokemon(${todos.indexOf(pokemon)})"><img src="${pokemon.imagen}" class="card-img-top" alt="..."></a>
                                 <div class="card-body">
                                     <h5 class="card-title">${pokemon.nombre}</h5>
-                                    <h6 class="card-title" id="tipos" style="color: #FFF;text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;"></h6>
+                                    <h6 class="card-title" id="tipos" style="overflow-wrap: normal;color: #FFF;text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;"></h6>
                                 </div>
                             </div>`);
     return nuevalista;
@@ -43,7 +43,7 @@ function agregarALista(bloque) {
 }
 
 function tipo(unTipo, color) {
-    return `<span style="background-color:`+ color +`; padding: 0rem 0.3rem 0.25rem 0.3rem; margin: 0 0.1rem; border-radius: 10px;">`+ unTipo +`</span>`;
+    return `<span style="font-size: 0.8rem;background-color:`+ color +`; padding: 0rem 0.3rem 0.25rem 0.3rem; margin: 0 0.1rem; border-radius: 10px;">`+ unTipo +` </span>`;
 }
 
 const tipos = {
@@ -81,6 +81,14 @@ function mostrar(listaTipo, nombreTipo) {
     crearLista(listaTipo).forEach( bloque => agregarALista(bloque));
     ponerTipos(listaTipo);
     document.querySelector("#" + nombreTipo).classList.add("active");
+}
+
+function buscar(pokemonE) {
+    let nombrePokemon = pokemonE.value.toLowerCase();
+    let pokemones = pokemons.filter(pokemon => pokemon.nombre.toLowerCase().includes(nombrePokemon));
+    limpiarLista();
+    crearLista(pokemones).forEach( bloque => agregarALista(bloque));
+    ponerTipos(pokemones);
 }
 ////////////////////////////
 

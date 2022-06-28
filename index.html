@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='en'>
+<html lang='en' style="font-size: 2.1vmin;">
 
 <head>
     <!-- Required meta tags -->
@@ -10,7 +10,7 @@
     <title>Poke</title>
 </head>
 
-<body class="bg-light m-1" style="height: 98vh;" onload="mostrar(todos, `todos`)">
+<body class="bg-light m-1" style="height: 98vh" onload="mostrar(todos, `todos`)">
     <header class="container rounded-pill bg-dark">
         <h1 class="text-white text-center"><span class="fw-bolder">1st Gen </span>Pokemon</h1>
     </header>
@@ -35,6 +35,9 @@
             <li class="nav-item" onclick="mostrar(dragon, `dragon`)"><a id="dragon" class="nav-link" href="#">Dragon</a></li>
             <li class="nav-item" onclick="mostrar(siniestro, `siniestro`)"><a id="siniestro" class="nav-link" href="#">Siniestro</a></li>
         </ul>
+        <div class="d-flex justify-content-center">
+            <input id="search" type="text" value="" placeholder="Pokemon" onkeyup="buscar(this)">
+        </div>
     </nav>
     <main class="container-fluid m-auto">
         <section class="row" style="height: 82vh;">
