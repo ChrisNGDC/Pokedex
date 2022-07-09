@@ -2,7 +2,7 @@ function crearLista(lista) {
     let nuevalista = lista.map(pokemon => `
                             <div class="col-3 p-0" id="P${pokemon.posPokedex}">
                             <div class="card m-1">
-                                <a style="cursor:zoom-in" onclick="mostrarPokemon(${todos.indexOf(pokemon)})"><img src="${pokemon.imagen}" class="card-img-top" alt="..."></a>
+                                <a style="cursor:zoom-in" onclick="mostrarPokemon(${todos.indexOf(pokemon)})"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.posPokedex}.png" class="card-img-top" alt="..."></a>
                                 <div class="card-body">
                                     <h5 class="card-title" style="font-size: 0.95rem;">${pokemon.nombre}</h5>
                                     <h6 class="card-title" id="tipos" style="overflow-wrap: normal;color: #FFF;text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;"></h6>
