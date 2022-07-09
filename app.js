@@ -18,6 +18,11 @@ app.get('/' ,function (req, res) {
     });
 })
 
+app.put('/', (req, res) => {
+    // Lectura Desde la Base de Datos //
+    
+})
+
 app.use((req, res, next) => {
     res.status(404).send("Esta pagina no existe")
 })

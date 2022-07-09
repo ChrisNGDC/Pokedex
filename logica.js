@@ -1,10 +1,10 @@
 function crearLista(lista) {
     let nuevalista = lista.map(pokemon => `
-                            <div class="col-3" id="P${pokemon.posPokedex}">
+                            <div class="col-3 p-0" id="P${pokemon.posPokedex}">
                             <div class="card m-1">
                                 <a style="cursor:zoom-in" onclick="mostrarPokemon(${todos.indexOf(pokemon)})"><img src="${pokemon.imagen}" class="card-img-top" alt="..."></a>
                                 <div class="card-body">
-                                    <h5 class="card-title">${pokemon.nombre}</h5>
+                                    <h5 class="card-title" style="font-size: 0.95rem;">${pokemon.nombre}</h5>
                                     <h6 class="card-title" id="tipos" style="overflow-wrap: normal;color: #FFF;text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;"></h6>
                                 </div>
                             </div>`);
@@ -96,7 +96,7 @@ function pokemonAMostrar(pokemon) {
     return  `
     <div class="card m-1 text-center" id="pokemon">
         <h4 class="card-title">N.º ${pokemon.posPokedex}</h4>
-        <a style="cursor:zoom-out" onclick="quitarPokemon()"><img src="${pokemon.imagen}" class="card-img-top" alt="..."></a>
+        <a style="cursor:zoom-out" onclick="quitarPokemon()"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.posPokedex}.png" class="card-img-top" alt="..."></a>
         <div class="card-body p-3">
             <h4 class="card-title">${pokemon.nombre}</h4>
             <h5 class="card-title" id="tipos" style="color: #FFF;text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;"></h5>
